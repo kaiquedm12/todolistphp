@@ -32,7 +32,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'login') {
     if ($userData) {
         $_SESSION['user_id'] = $userData['id'];
         $_SESSION['user_name'] = $userData['name'];
-        header("Location: ../../index.php");
+        header("Location: ../views/tasks/dashboard.php");
         exit;
     } else {
         header("Location: ../views/auth/login.php?error=Credenciais inválidas");
