@@ -76,9 +76,35 @@ class Task {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function getAllByUser($userId) {
-    $stmt = $this->conn->prepare("SELECT * FROM tasks WHERE user_id = ? ORDER BY created_at DESC");
-    $stmt->execute([$userId]);
+    public function getAllByUser($userId, $status = '', $sort = '', $search = '') {
+    $query = "SELECT * FROM tasks WHERE user_id = :user_id";
+
+    if ($status) {
+        $query .= " AND status = :status";
+    }
+
+    if ($search) {
+        $query .= " AND title LIKE :search";
+    }
+
+    // Ordenação
+    switch ($sort) {
+        case 'oldest':
+            $query .= " ORDER BY created_at ASC";
+            break;
+        case 'deadline':
+            $query .= " ORDER BY deadline ASC";
+            break;
+        default:
+            $query .= " ORDER BY created_at DESC";
+    }
+
+    $stmt = $this->conn->prepare($query);
+    $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+    if ($status) $stmt->bindParam(':status', $status);
+    if ($search) $stmt->bindValue(':search', "%$search%");
+    $stmt->execute();
+
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 

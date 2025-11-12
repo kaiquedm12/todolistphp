@@ -41,9 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // ✅ NOVO BLOCO: listar tarefas
     if ($action === 'list') {
-        $tasks = $task->getAllByUser($userId);
+        $status = $_POST['status'] ?? '';
+        $sort = $_POST['sort'] ?? '';
+        $search = $_POST['search'] ?? '';
+        $tasks = $task->getAllByUser($userId, $status, $sort, $search);
         echo json_encode($tasks);
-        exit;
+    exit;
     }
 
     file_put_contents(__DIR__ . '/../debug_log.txt', print_r($_POST, true), FILE_APPEND);
