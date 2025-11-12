@@ -1,0 +1,5 @@
+# Evita subir arquivos de config com senhas
+config/db.php
+*.log
+.idea/
+.vscode/
