@@ -16,6 +16,7 @@ if (!isset($_SESSION['user_id'])) {
 
 <div class="container py-4">
     <h2>Olá, <?= htmlspecialchars($_SESSION['user_name']); ?> 👋</h2>
+    <a href="#" id="logout" class="btn btn-outline-danger btn-sm">Sair</a>
     <form id="taskForm" class="mb-3">
         <input type="hidden" name="action" value="create">
         <div class="row g-2">
@@ -42,43 +43,7 @@ if (!isset($_SESSION['user_id'])) {
 $(document).ready(function() {
 
     function loadTasks() {
-         $.post("../../controllers/taskController.php", { action: "list" }, function(response) {
-        try {
-            const tasks = JSON.parse(response);
-            let html = `
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Título</th>
-                            <th>Descrição</th>
-                            <th>Status</th>
-                            <th>Data Limite</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
-            tasks.forEach(t => {
-                html += `
-                    <tr>
-                        <td>${t.title}</td>
-                        <td>${t.description || ""}</td>
-                        <td>${t.status}</td>
-                        <td>${t.deadline || ""}</td>
-                        <td>
-                            <button class="btn btn-sm btn-danger delete" data-id="${t.id}">Excluir</button>
-                            <button class="btn btn-sm btn-warning toggle" data-id="${t.id}" data-status="${t.status}">Alternar</button>
-                        </td>
-                    </tr>
-                `;
-            });
-            html += "</tbody></table>";
-            $("#taskList").html(html);
-        } catch (err) {
-            console.error("Erro ao carregar tarefas:", err, response);
-            $("#taskList").html("<p class='text-danger'>Erro ao carregar tarefas.</p>");
-        }
-     });
+        $("#taskList").load("list_tasks.php");
     }
 
     loadTasks();
