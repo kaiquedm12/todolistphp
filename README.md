@@ -1,20 +1,52 @@
-<<<<<<< HEAD
-# 🧩 Sistema de Controle de Tarefas (To-Do List)
+# Todo System — Gerenciador de Tarefas (PHP + MySQL)
 
-Projeto de controle de tarefas em equipe desenvolvido em **PHP puro**, **MySQL**, **Bootstrap 5** e **jQuery**.
+Este projeto é um sistema completo de gerenciamento de tarefas desenvolvido em PHP, utilizando MySQL, AJAX e Bootstrap.
+Ele permite que usuários criem uma conta, façam login e gerenciem suas tarefas em um painel simples, rápido e responsivo — tudo atualizado dinamicamente sem recarregar a página.
 
-## 🚀 Tecnologias
-- PHP 8+
+O objetivo do sistema é oferecer uma solução prática e intuitiva para organizar atividades diárias, servindo como base para estudos, portfólio ou uso acadêmico.
+
+## 🚀 Funcionalidades Principais
+
+- Autenticação com login e registro
+
+- Dashboard do usuário
+
+- CRUD completo de tarefas
+
+- Atualização dinâmica via AJAX
+
+- Interface responsiva com Bootstrap
+
+- Edição, exclusão e alternância de status
+
+- Proteção de rotas com sessões
+
+## 📄 Documentações Disponíveis
+
+Para detalhes completos do projeto, consulte:
+
+## 📘 Manual Funcional
+
+Explica como usar o sistema, suas telas e o passo a passo de navegação.
+🔗 docs/manual-funcional.md
+
+## 📙 Documentação Técnica
+
+Arquitetura, banco de dados, controllers, AJAX, decisões técnicas e requisitos de instalação.
+🔗 docs/documentacao-tecnica.md
+
+## 🛠️ Tecnologias
+
+- PHP 8
+
 - MySQL
-- Bootstrap 5
-- jQuery
-- Git
 
-## ⚙️ Instalação
-1. Copie o projeto para `C:\xampp\htdocs\todo-system`
-2. Importe o arquivo `sql/database.sql` no MySQL
-3. Configure o arquivo `config/db.php` conforme seu ambiente
-4. Acesse via navegador: [http://localhost/todo-system](http://localhost/todo-system)
-=======
-# ToDoListPHP
->>>>>>> 8d0c651d7f87dd31688578c3d1d3a8cd37463c53
+- Bootstrap 5
+
+- jQuery / AJAX
+
+- HTML5 / CSS3
+
+## 👨‍💻 Autor
+
+Desenvolvido por Kaique Demetrio.
