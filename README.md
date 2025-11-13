@@ -25,12 +25,12 @@ O objetivo do sistema é oferecer uma solução prática e intuitiva para organi
 
 Para detalhes completos do projeto, consulte:
 
-## 📘 Manual Funcional
+#### 📘 Manual Funcional
 
 Explica como usar o sistema, suas telas e o passo a passo de navegação.
 🔗 docs/manual-funcional.md
 
-## 📙 Documentação Técnica
+#### 📙 Documentação Técnica
 
 Arquitetura, banco de dados, controllers, AJAX, decisões técnicas e requisitos de instalação.
 🔗 docs/documentacao-tecnica.md
