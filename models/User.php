@@ -9,7 +9,7 @@ class User {
     }
 
     public function register($name, $email, $password) {
-        // Verifica se e-mail já existe
+        
         $stmt = $this->conn->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);
 
@@ -17,10 +17,10 @@ class User {
             return "E-mail já cadastrado!";
         }
 
-        // Hash seguro da senha
+        
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        // Insere usuário
+        
         $stmt = $this->conn->prepare("INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)");
         if ($stmt->execute([$name, $email, $hashedPassword])) {
             return true;

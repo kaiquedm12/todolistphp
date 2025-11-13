@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $task->toggleStatus($_POST['id'], $newStatus);
     }
 
-    // ✅ NOVO BLOCO: listar tarefas
+   
     if ($action === 'list') {
         $status = $_POST['status'] ?? '';
         $sort = $_POST['sort'] ?? '';

@@ -5,7 +5,7 @@ require_once __DIR__ . '/../config/db_connect.php';
 
 $user = new User($conn);
 
-// Cadastro
+
 if (isset($_POST['action']) && $_POST['action'] === 'register') {
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
@@ -22,7 +22,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'register') {
     }
 }
 
-// Login
+
 if (isset($_POST['action']) && $_POST['action'] === 'login') {
     $email = trim($_POST['email']);
     $password = $_POST['password'];
@@ -40,7 +40,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'login') {
     }
 }
 
-// Logout
+
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     session_destroy();
     header("Location: ../views/auth/login.php");

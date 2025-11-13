@@ -41,7 +41,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
     </div>
 
-    <!-- FORMULÁRIO DE CRIAÇÃO -->
+    
     <form id="taskForm" class="mb-3">
         <input type="hidden" name="action" value="create">
         <div class="row g-2">
@@ -67,7 +67,7 @@ if (!isset($_SESSION['user_id'])) {
 <script>
 $(document).ready(function() {
 
-    // === FUNÇÃO PRINCIPAL DE CARREGAR TAREFAS ===
+    
     function loadTasks() {
         const status = $("#filterStatus").val();
         const sort = $("#sortBy").val();
@@ -128,7 +128,7 @@ $(document).ready(function() {
         });
     }
 
-    // === CHAMADAS E EVENTOS ===
+    
     loadTasks();
 
     $("#taskForm").on("submit", function(e) {
@@ -181,7 +181,7 @@ $(document).ready(function() {
         this.delay = setTimeout(loadTasks, 400);
     });
 
-    // Logout
+    
     $("#logout").on("click", function(e) {
         e.preventDefault();
         $.post("../../controllers/userController.php", {action: "logout"}, function() {

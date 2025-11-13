@@ -87,7 +87,7 @@ class Task {
         $query .= " AND title LIKE :search";
     }
 
-    // Ordenação
+    
     switch ($sort) {
         case 'oldest':
             $query .= " ORDER BY created_at ASC";
