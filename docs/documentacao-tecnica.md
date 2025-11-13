@@ -98,15 +98,16 @@ $.post("../../controllers/taskController.php", {
     description: "...",
     deadline: "..."
 });
-Exemplo — excluir
-js
-Copiar código
+``` 
+### Exemplo — excluir
+```js
 $.post("../../controllers/taskController.php", { action: "delete", id });
-Exemplo — listar
-js
-Copiar código
+```
+### Exemplo — listar
+```js
 $("#taskList").load("list_tasks.php");
-5. Decisões Técnicas Utilizadas
+```
+## 5. Decisões Técnicas Utilizadas
 ✔ MVC simplificado
 Evita mistura de lógica e visual.
 
@@ -122,45 +123,47 @@ Padroniza layout e aparência.
 ✔ Prepared Statements (PDO)
 Evita SQL Injection.
 
-6. Configuração Local
-1. Clonar ou copiar o projeto
+## 6. Configuração Local
+
+### 1. Clonar ou copiar o projeto
 Coloque em:
 
-bash
-Copiar código
+```bash
 xampp/htdocs/todo-system
-2. Banco
+```
+### 2. Banco
 Criar banco:
 
-nginx
-Copiar código
+```nginx
 todo_system
 Executar script SQL das tabelas.
+```
 
-3. Configurar /config/db_connect.php
+### 3. Configurar /config/db_connect.php
 Exemplo:
 
-php
-Copiar código
+```php
 $host = 'localhost';
 $db   = 'todo_system';
 $user = 'root';
 $pass = '';
-4. Executar no navegador:
-perl
-Copiar código
+```
+### 4. Executar no navegador:
+```perl
 http://localhost/todo-system/views/auth/login.php
-7. Considerações Finais
+```
+
+## 7. Considerações Finais
 A estrutura é planejada para fácil manutenção e evolução.
 Próximas melhorias podem incluir:
 
-Modal de edição
+- Modal de edição
 
-Filtros avançados
+- Filtros avançados
 
-Ordenação por data
+- Ordenação por data
 
-API completa em JSON
+- API completa em JSON
 
 
 
