@@ -2,15 +2,12 @@
 
 ## 1. Arquitetura Geral
 O projeto segue uma estrutura MVC simplificada:
-
+```
 /config → Conexão com o banco
 /controllers → Lógica de usuário e tarefas
 /models → Classes que manipulam o banco
 /views → Telas HTML/PHP
-
-yaml
-Copiar código
-
+```
 Requisições assíncronas (AJAX) fazem a comunicação entre `views` → `controllers`.
 
 ---
@@ -165,18 +162,6 @@ Ordenação por data
 
 API completa em JSON
 
-yaml
-Copiar código
-
----
-
-Se quiser, posso:
-
-✅ Gerar os arquivos prontos na pasta `docs/`  
-✅ Transformar em PDF  
-✅ Ou ajustar com o nome do seu projeto no cabeçalho  
-
-Só pedir!
 
 
 
