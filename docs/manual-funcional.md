@@ -82,13 +82,15 @@ Clique em **Sair** para encerrar a sessão.
 
 ### **Pré-requisitos**
 - PHP 8+
-- MySQL ou MariaDB
-- XAMPP/WAMP/MAMP (recomendado)
-- Navegador web
+- MySQL
+- XAMPP/WAMP/MAMP 
 
 ---
 
 ### **Passos de instalação**
+#### Download XAMPP: 
+`https://www.apachefriends.org/pt_br/download.html`
+
 1. Clone o projeto dentro da pasta:
 xampp/htdocs/
 
