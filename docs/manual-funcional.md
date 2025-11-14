@@ -89,9 +89,8 @@ Clique em **Sair** para encerrar a sessão.
 ---
 
 ### **Passos de instalação**
-1. Coloque o projeto dentro da pasta:
-xampp/htdocs/todo-system/
-
+1. Clone o projeto dentro da pasta:
+xampp/htdocs/
 
 2. Importe o arquivo SQL no phpMyAdmin:
 - Crie o banco `todo_system`
